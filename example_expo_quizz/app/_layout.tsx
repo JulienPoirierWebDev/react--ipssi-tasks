@@ -1,6 +1,8 @@
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { Tabs } from "expo-router";
 const RootLayout = () => {
+  const isContextLoggedIn = true;
+
   return (
     <Tabs screenOptions={{ tabBarActiveTintColor: "black" }}>
       <Tabs.Screen
@@ -22,6 +24,14 @@ const RootLayout = () => {
           ),
         }}
       />
+      (
+      <Tabs.Screen
+        name="test"
+        options={{
+          href: isContextLoggedIn ? "/test" : null,
+        }}
+      />
+      )
     </Tabs>
   );
 };

@@ -1,4 +1,4 @@
-import { Text } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 
 /*
 
@@ -17,7 +17,29 @@ dans le composant la question en cours, toutes les questions, le score, etc.)
 
 */
 const Easy = () => {
-  return <Text>Trop simple</Text>;
+  return (
+    <ScrollView>
+      <View style={styles.title}>
+        <Text>Hello world</Text>
+      </View>
+      <View>
+        <Text style={styles.text}>Goodbye world</Text>
+      </View>
+    </ScrollView>
+  );
 };
 
+const styles = StyleSheet.create({
+  title: {
+    borderWidth: 4,
+    borderColor: "red",
+    backgroundColor: "black",
+    padding: 32,
+    color: "blue",
+  },
+  text: {
+    color: "blue",
+    fontSize: 12,
+  },
+});
 export default Easy;
